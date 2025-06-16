@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import TelaSaude from './pages/TelaSaude'
+import TelaLogin from './pages/TelaLogin'
 
-
-
-
-function App() {
+export default function App() {
   return (
-    <h1>Projeto iniciado com sucesso 🚀</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<TelaSaude />} />
+        <Route path="/login" element={<TelaLogin />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App

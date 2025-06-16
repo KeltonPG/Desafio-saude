@@ -1,0 +1,48 @@
+.cabecalho {
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0057A0;
+  padding: 0 20px;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .menu {
+  display: flex;
+  gap: 16px;
+  padding-right: 2.5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

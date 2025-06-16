@@ -1,0 +1,31 @@
+.botao-opcao {
+  background-color: #0057A0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 119, 204, 0.4);
+  color: white;
+  font-weight: 700;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #005fa3;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
