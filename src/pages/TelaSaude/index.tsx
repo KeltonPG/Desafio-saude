@@ -13,7 +13,9 @@ import './TelaSaude.scss'
 export default function TelaSaude() {
   return (
     <div className="pagina-saude">
-      <Cabecalho />
+      <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={false}/>
+
+
 
       <main className="pagina-central">
         <h1 className="titulo-principal">Secretaria de Estado da Saúde do Maranhão</h1>
