@@ -1,0 +1,93 @@
+.pagina-add-hospitais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  main {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titulo {
+      color: #0056b3;
+      font-size: 20px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .subtitulo {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .formulario {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #003366;
+      }
+
+      input {
+        padding: 10px;
+        border: none;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+
+        &:focus {
+          outline: 2px solid #007bff;
+        }
+      }
+
+      .botoes {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        button {
+          flex: 1;
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+
+        .cancelar {
+          background-color: #aaa;
+          color: white;
+
+          &:hover {
+            background-color: #888;
+          }
+        }
+
+        .salvar {
+          background-color: #0056b3;
+          color: white;
+
+          &:hover {
+            background-color: #003f80;
+          }
+        }
+      }
+    }
+  }
+}
