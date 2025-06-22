@@ -1,0 +1,30 @@
+{
+  "name": "saudeproxima-desafio04trilhas",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devnandii/SaudeProxima-Desafio04Trilhas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devnandii/SaudeProxima-Desafio04Trilhas/issues"
+  },
+  "homepage": "https://github.com/devnandii/SaudeProxima-Desafio04Trilhas#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
