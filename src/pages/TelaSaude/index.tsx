@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 // Importa os componentes existentes do seu projeto
 import { Cabecalho } from '../../components/Cabecalho';
 import { BotaoOpcao } from '../../components/BotaoOpcao';
+import { useNavigate } from 'react-router-dom'
 
 // Importa os ícones e imagens existentes do seu projeto
 import iconeVacina from '../../assets/vacina.svg';
@@ -33,6 +34,9 @@ interface SelectOption {
 }
 
 export default function TelaSaude() {
+    const navigate = useNavigate();
+
+
     // --- Estados para a funcionalidade de busca ---
     const [termoBusca, setTermoBusca] = useState('');
     const [categoriaSelecionadaId, setCategoriaSelecionadaId] = useState<number | ''>('');
@@ -190,10 +194,10 @@ export default function TelaSaude() {
 
                 {/* Seus Botões de Opção existentes */}
                 <div className="botoes">
-                    <BotaoOpcao icone={iconeVacina} texto="Imunização" aoClicar={() => {}} />
-                    <BotaoOpcao icone={iconeConsulta} texto="Consulta Médica" aoClicar={() => {}} />
-                    <BotaoOpcao icone={iconeHospital} texto="Exames" aoClicar={() => {}} />
-                    <BotaoOpcao icone={iconeEmergencia} texto="Emergência" aoClicar={() => {}} />
+                    <BotaoOpcao icone={iconeVacina} texto="Imunização" aoClicar={() => navigate('/TelaLocHosp')} />
+                    <BotaoOpcao icone={iconeConsulta} texto="Consulta Médica" aoClicar={() => navigate('/TelaLocHosp')} />
+                    <BotaoOpcao icone={iconeHospital} texto="Exames" aoClicar={() => navigate('/TelaLocHosp')} />
+                    <BotaoOpcao icone={iconeEmergencia} texto="Emergência" aoClicar={() => navigate('/TelaLocHosp')} />
                 </div>
 
                 {/* --- SEÇÃO DE BUSCA DINÂMICA (Adicionada/Integrada) --- */}
