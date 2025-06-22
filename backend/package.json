@@ -1,30 +1,24 @@
 {
-  "name": "saudeproxima-desafio04trilhas",
+  "name": "desafio-saude-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Servidor backend para a aplicação Desafio Saúde.",
   "type": "module",
+  "main": "server.js",
   "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel deploy --prod"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "node-fetch": "^3.3.2",
-    "pg": "^8.16.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devnandii/SaudeProxima-Desafio04Trilhas.git"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/devnandii/SaudeProxima-Desafio04Trilhas/issues"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.19.2",      
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.0"
   },
-  "homepage": "https://github.com/devnandii/SaudeProxima-Desafio04Trilhas#readme",
   "devDependencies": {
-    "sass": "^1.89.2"
+    "nodemon": "^3.1.4"
   }
 }
