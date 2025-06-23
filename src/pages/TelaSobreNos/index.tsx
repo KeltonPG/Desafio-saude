@@ -1,9 +1,8 @@
 import { Cabecalho } from '../../components/Cabecalho'
 import './TelaSobreNos.scss'
-import { useNavigate } from 'react-router-dom' 
+
 
 export default function TelaSobreNos() {
-    const navigate = useNavigate(); 
 
     return (
         <div className='pagina-sobrenos'>

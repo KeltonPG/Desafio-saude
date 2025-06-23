@@ -4,6 +4,7 @@ import TelaLogin from './pages/TelaLogin'
 import TelaConfigHospitais from './pages/TelaConfigHospital'
 import TelaAddHospitais from './pages/TelaAddHospitais';
 import TelaLocHosp from './pages/TelaLocHosp'
+import TelaSobreNos from './pages/TelaSobreNos';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/config-hospitais" element={<TelaConfigHospitais />} />
         <Route path="/config-hospitais/adicionar" element={<TelaAddHospitais />} />
         <Route path="/TelaLocHosp" element={<TelaLocHosp />} />
+        <Route path="/sobre" element={<TelaSobreNos/>} />
       </Routes>
     </BrowserRouter>
   )
