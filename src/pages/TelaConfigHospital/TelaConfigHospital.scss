@@ -1,0 +1,75 @@
+.pagina-config-hospitais {
+  main {
+  margin-top: 4rem;
+  padding: 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    color: #0057A0;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+
+  }
+
+    .lista-hospitais {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cartao-hospital {
+      background-color: #0057A0;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+      .nome {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .especialidade,
+      .data {
+        font-size: 1rem;
+      }
+
+      .acoes {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1.2rem;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+
+    .botao-adicionar {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75rem;
+      background-color:#0057A0;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+      &:hover {
+        background-color: #1169f6af;
+      }
+    }
+  }
+}
