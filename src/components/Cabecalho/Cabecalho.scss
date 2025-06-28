@@ -25,6 +25,12 @@
     object-fit: contain;
   }
 
+  .icone-busca {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
   .icone-voltar {
     width: 32px;
     height: 32px;
@@ -32,11 +38,13 @@
   }
 
   .botao-voltar,
-  .botao-logo {
+  .botao-logo,
+  .botao-busca {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
+    padding-right: 2rem;
 
     display: flex;
     align-items: center;
@@ -66,9 +74,5 @@
 
   .menu {
     display: none;
-  }
-
-  .lado-direito {
-    padding-right: 2rem;
   }
 }

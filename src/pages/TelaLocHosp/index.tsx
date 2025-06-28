@@ -5,7 +5,7 @@ export default function TelaLocHosp() {
 
   return (
     <div className="pagina-LocHosp">
-      <Cabecalho mostrarLogo={true} mostrarMenu={false} mostrarBotaoVoltar={true}/>
+        <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={true} mostrarBotaoBusca={false}/>
 
         <main className="conteudo">
             <section className="unidade">

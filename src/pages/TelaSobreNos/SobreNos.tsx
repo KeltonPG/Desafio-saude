@@ -6,7 +6,7 @@ export default function TelaSobreNos() {
 
     return (
         <div className='pagina-sobrenos'>
-            <Cabecalho mostrarLogo= {true} mostrarMenu={true} mostrarBotaoVoltar={false}/>
+            <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={true} mostrarBotaoBusca={false}/>
 
             <header className='pagina-sobre'>
                 <h1 className='titulo-principal'>Sobre Nós</h1>
