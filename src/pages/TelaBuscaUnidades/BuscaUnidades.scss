@@ -1,55 +1,31 @@
 .busca-container {
-  min-height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: #fff;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 7rem;
-}
-
-.busca-header {
+  min-height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0.5rem 1rem 0 1rem;
-  background: transparent;
-
-  .voltar {
-    border: none;
-    background: transparent;
-    font-size: 0.85rem;
-    cursor: pointer;
-    color: #222;
-    padding: 0;
-  }
-
-  img {
-    width: 48px;
-    height: 48px;
-  }
+  font-family: 'Roboto', sans-serif;
 }
 
 .busca-main {
   width: 100%;
-  max-width: 340px;
-  margin: 0 auto;
+  max-width: 380px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .pin-img {
-    width: 161px;
-    height: 136px;
-    margin: 0.5rem 0 1rem 0;
+    width: 134px;
+    height: 113px;
+    margin: 1rem 0;
+    margin-top: 5rem;
   }
 
   .titulo-principal {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #ffffff;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -58,76 +34,90 @@
 
 .form-busca {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
 
   label {
+    font-size: 0.9rem;
+    color: #333;
     width: 100%;
     display: flex;
     flex-direction: column;
-    font-size: 0.95rem;
-    color: #333;
-    margin-bottom: 0.2rem;
-    align-items: flex-start;
 
     input {
-      width: 100%;
-      height: 48px;
-      margin-top: 0.25rem;
-      padding: 0.7rem 0.5rem;
+      margin-top: 0.4rem;
+      padding: 0.75rem;
       border: none;
       border-radius: 8px;
       background: #e6e7e8;
       font-size: 1rem;
-      box-sizing: border-box;
 
       &:focus {
-        outline: 2px solid #0057a0;
+        outline: 2px solid #005eb8;
+        background: #fff;
+      }
+    }
+
+    .react-select__control {
+      margin-top: 0.4rem;
+      background: #e6e7e8;
+      border-radius: 8px;
+      border: none;
+      min-height: 48px;
+      font-size: 1rem;
+      box-shadow: none;
+
+      &:focus,
+      &--is-focused {
+        border: none;
+        box-shadow: 0 0 0 2px #005eb8;
         background: #fff;
       }
     }
   }
 
   .botao-buscar {
-    width: 100%;
-    height: 48px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.9rem;
     border: none;
-    border-radius: 25px;
-    background: #0057a0;
-    color: #fff;
-    font-weight: 700;
+    border-radius: 999px;
+    background-color: #005eb8;
+    color: white;
+    font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 2px 6px #0001;
-    transition: filter 0.2s;
-    display: block;
+    transition: background 0.2s;
 
     &:hover {
-      filter: brightness(1.1);
+      background: #0072d0;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
   }
 }
 
-/* Responsividade para celular */
-@media (max-width: 480px) {
-  .busca-container {
-    margin-top: 0;
+.resultados-busca {
+  margin-top: 2rem;
+  width: 100%;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
   }
-  .busca-main {
-    margin-top: 0;
-    max-width: 98vw;
-    padding: 0 2vw;
+
+  li {
+    margin-bottom: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
   }
-  .form-busca {
-    max-width: 90vw;
-  }
-  .form-busca label,
-  .form-busca .botao-buscar {
-    max-width: 98vw;
+
+  p {
+    color: #666;
+    text-align: center;
   }
 }
