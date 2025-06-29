@@ -31,6 +31,8 @@ export default function TelaSobreNos() {
                         tecnologia, inovação e compromisso social para impactar positivamente 
                         a vida da população maranhense. 
                     </p>
+                    <img className='img__quem__somos' src="../src/assets/quem__somos.png"  
+                        alt='grupo de pessoas' />
                 </section>
             </main>
         </div>
