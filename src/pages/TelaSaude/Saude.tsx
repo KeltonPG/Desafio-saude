@@ -1,59 +1,144 @@
-import { useNavigate } from 'react-router-dom';
-
-// Importa os componentes existentes do seu projeto
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
-import { BotaoOpcao } from '../../components/BotaoOpcao';
-
-// Importa os ícones e imagens existentes do seu projeto
-import iconeVacina from '../../assets/vacina.svg';
-import iconeConsulta from '../../assets/doutora.svg';
-import iconeEmergencia from '../../assets/emergencia.svg';
-import iconeHospital from '../../assets/hospital.svg';
-import fotoMedica from '../../assets/vacina_aplicada.png';
-
-// Importa os estilos SCSS existentes
 import './TelaSaude.scss';
 
-export default function TelaSaude() {
-    const navigate = useNavigate();
+import mapaPin2 from '../../assets/mapa-pin2.png';
+import vacina from '../../assets/vacina.svg';
+import doutora from '../../assets/doutora.svg';
+import exame from '../../assets/emergencia.svg';
+import emergencia from '../../assets/emergencia.svg';
+import vacinaAplicada from '../../assets/vacina_aplicada.png';
+import check from '../../assets/check.svg';
+import Jogo from '../../assets/jogo.png';
 
-    return (
-        <div className="pagina-saude"> {/* Mantido o nome de classe do seu código */}
-            {/* Seu Cabeçalho existente */}
-            <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={false}/>
 
-            <main className="pagina-central"> {/* Mantido o nome de classe do seu seu código */}
-                <h1 className="titulo-principal">Secretaria de Estado da Saúde do Maranhão</h1>
-                <p className="subtitulo">Trabalhando por uma saúde pública de qualidade</p>
-                <h2 className="subtitulo-negrito">Escolha a unidade mais próxima de você!</h2>
+export default function HomePage() {
+  const navigate = useNavigate();
+  const noticias = [
+    {
+      titulo: 'Avanço na cobertura vacinal infantil',
+      texto: 'O estado aumentou a cobertura vacinal em 12 das 16 vacinas do PNI. Confira as unidades com doses disponíveis.',
+      imagem: vacinaAplicada,
+      link: null,
+    },
+    {
+      titulo: 'Experimente o nosso jogo e aprenda brincando',
+      texto: 'Este jogo foi desenvolvido para conscientizar, de forma divertida, sobre a importância de marcar e não faltar às consultas médicas. Comparecer às consultas ajuda no diagnóstico precoce, no acompanhamento da saúde e na melhoria do atendimento para todos',
+      imagem: Jogo,
+      link: 'https://joao104.github.io/jogo-rota-de-vida/',
+    },
+  ];
 
-                {/* Seus Botões de Opção existentes */}
-                <div className="botoes">
-                    <BotaoOpcao icone={iconeVacina} texto="Imunização" aoClicar={() => navigate('/TelaLocHosp')} />
-                    <BotaoOpcao icone={iconeConsulta} texto="Consulta Médica" aoClicar={() => navigate('/TelaLocHosp')} />
-                    <BotaoOpcao icone={iconeHospital} texto="Exames" aoClicar={() => navigate('/TelaLocHosp')} />
-                    <BotaoOpcao icone={iconeEmergencia} texto="Emergência" aoClicar={() => navigate('/TelaLocHosp')} />
-                </div>
+  const [noticiaAtual, setNoticiaAtual] = useState(0);
+  const proximaNoticia = () => setNoticiaAtual((noticiaAtual + 1) % noticias.length);
+  const noticiaAnterior = () => setNoticiaAtual((noticiaAtual - 1 + noticias.length) % noticias.length);
 
-                {/* Sua Seção de Notícias existente */}
-                <section className="noticias">
-                    <h3>Últimas notícias</h3>
-                    <h4>Avanço na cobertura vacinal infantil</h4>
-                    <img className="fundo-foto" src={fotoMedica} alt="Vacinação" />
-                    <p>
-                        O estado aumentou a cobertura vacinal de 12 das 16 vacinas recomendadas no calendário
-                        infantil do Programa Nacional de Imunizações, com destaque para a vacina contra hepatite
-                        A, que passou de 63,6% em 2022 para 77,15% em 2023.
-                        <br />
-                        <strong>Fonte: Ministério da Saúde</strong>
-                    </p>
-                </section>
-            </main>
+  return (
+    <div className="homepage-container">
+      <Cabecalho mostrarLogo mostrarMenu mostrarBotaoVoltar={false} />
 
-            {/* Seu Rodapé existente */}
-            <footer className="rodape">
-                <p>© 2025 Grupo de Desenvolvimento • Plataforma de Apoio à Saúde</p>
-            </footer>
+      {/* HERO */}
+      <section className="hero">
+        <div className="textos">
+          <h1>ClíniPerto</h1>
+          <p>Encontre hospitais, clínicas e serviços de saúde próximos de você.</p>
+          <button
+            onClick={() => {
+              navigate('/busca');
+            }}
+          >
+            Buscar agora
+          </button>
         </div>
-    );
+        <img src={mapaPin2} alt="Mapa com marcador" className="mapa-img" />
+      </section>
+
+      {/* COMO FUNCIONA */}
+      <section className="como-funciona">
+        <div className="passo-card">
+          <span>
+            <img src={check} alt="Check" />
+          </span>
+          <p>Digite seu endereço ou use sua localização</p>
+        </div>
+        <div className="passo-card">
+          <span>
+          <img src={check} alt="Check" />
+          </span>
+          <p>Selecione especialidade ou tipo de unidade</p>
+        </div>
+        <div className="passo-card">
+          <span>
+          <img src={check} alt="Check" />
+          </span>
+          <p>Veja as unidades mais próximas</p>
+        </div>
+      </section>
+
+      {/* SERVIÇOS POPULARES */}
+      <section className="servicos-populares">
+        <h2>Serviços Populares</h2>
+        <div className="cards">
+          <div className="card">
+            <img src={vacina} alt="Imunização" />
+            <p>Imunização</p>
+            <Link to="/busca" className="btn-unidades">Ver unidades</Link>
+          </div>
+          <div className="card">
+            <img src={doutora} alt="Consultas" />
+            <p>Consultas</p>
+            <Link to="/busca" className="btn-unidades">Ver unidades</Link>
+          </div>
+          <div className="card">
+            <img src={exame} alt="Exames" />
+            <p>Exames</p>
+            <Link to="/busca" className="btn-unidades">Ver unidades</Link>
+          </div>
+          <div className="card">
+            <img src={emergencia} alt="Urgência" />
+            <p>Urgência</p>
+            <Link to="/busca" className="btn-unidades">Ver unidades</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CARROSSEL DE NOTÍCIAS */}
+      <section className="noticias">
+        <h2>Últimas Notícias</h2>
+        <div className="carrossel">
+          <div className="seta-container esquerda">
+            <button className="seta" onClick={noticiaAnterior}>&lt;</button>
+          </div>
+          <div className="noticia-carrossel">
+            {noticias[noticiaAtual].link ? (
+              <a href={noticias[noticiaAtual].link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <img src={noticias[noticiaAtual].imagem} alt={noticias[noticiaAtual].titulo} />
+              </a>
+            ) : (
+              <img src={noticias[noticiaAtual].imagem} alt={noticias[noticiaAtual].titulo} />
+            )}
+            <div className="texto">
+              <h3>{noticias[noticiaAtual].titulo}</h3>
+              <p>{noticias[noticiaAtual].texto}</p>
+              
+            </div>
+          </div>
+          <div className="seta-container direita">
+            <button className="seta" onClick={proximaNoticia}>&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      {/* RODAPÉ */}
+      <footer className="rodape">
+        <div className="logo">© 2025 Grupo de Desenvolvimento • Plataforma de Apoio à Saúde</div>
+        <div className="links">
+          <a href="/sobre">Sobre</a>
+          <a href="#">Contato</a>
+          <a href="#">Privacidade</a>
+        </div>
+      </footer>
+    </div>
+  );
 }
