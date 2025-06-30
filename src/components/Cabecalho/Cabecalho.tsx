@@ -52,7 +52,6 @@ export function Cabecalho({
         {mostrarMenu && !modoVoltar && (
           <nav className="menu">
             <a href="/">Dashboard</a>
-            <a href="/sobre">Sobre Nós</a>
             <a href="/login">Login</a>
           </nav>
         )}

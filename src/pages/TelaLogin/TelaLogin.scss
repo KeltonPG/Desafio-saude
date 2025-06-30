@@ -13,7 +13,7 @@
   }
 
   .caixa-login {
-    background: #f9f9f9;
+    background: #0057A0;
     padding: 24px;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@
     gap: 12px;
 
     h1 {
-      color: #0077cc;
+      color: #fff;
       font-size: 1.5rem;
       text-align: center;
       margin-bottom: 12px;
@@ -45,19 +45,25 @@
 
       a {
         font-size: 0.8rem;
-        color: #0077cc;
+        color: #ffffff;
         text-decoration: none;
       }
 
       .botao-entrar {
-        background-color: #0077cc;
-        color: white;
+        background-color: #ffffff;
+        color: #0057A0;
         padding: 10px 16px;
         border: none;
         border-radius: 8px;
         font-weight: 600;
         cursor: pointer;
       }
+    }
+    .mensagem-erro {
+      color: #ffffff;
+      font-size: 0.8rem;
+      text-align: center;
+      margin-top: 8px;
     }
   }
 }
