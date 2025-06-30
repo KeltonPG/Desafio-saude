@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Cabecalho } from '../../components/Cabecalho';
+import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import './TelaAddHospitais.scss';
 
 export default function TelaAddHospitais() {
@@ -32,8 +32,7 @@ export default function TelaAddHospitais() {
 
   return (
     <div className="pagina-add-hospitais">
-      <Cabecalho mostrarLogo={true} mostrarMenu={false} mostrarBotaoVoltar={true}
-/>
+       <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={true} mostrarBotaoBusca={false}/>
 
       <main>
         <h2 className="titulo">Gerenciamento de Hospitais</h2>

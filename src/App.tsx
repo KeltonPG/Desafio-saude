@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import TelaSaude from './pages/TelaSaude'
+import TelaSaude from './pages/TelaSaude/Saude'
+
+import TelaLocHosp from './pages/TelaLocHosp'
+import TelaSobreNos from './pages/TelaSobreNos/SobreNos';
+import TelaBuscaUnidades from './pages/TelaBuscaUnidades/BuscaUnidades';
 import TelaLogin from './pages/TelaLogin'
 import TelaConfigHospitais from './pages/TelaConfigHospital'
 import TelaAddHospitais from './pages/TelaAddHospitais';
-import TelaLocHosp from './pages/TelaLocHosp'
-import TelaSobreNos from './pages/TelaSobreNos';
 
 export default function App() {
   return (
@@ -16,6 +18,7 @@ export default function App() {
         <Route path="/config-hospitais/adicionar" element={<TelaAddHospitais />} />
         <Route path="/TelaLocHosp" element={<TelaLocHosp />} />
         <Route path="/sobre" element={<TelaSobreNos/>} />
+        <Route path="/busca" element={<TelaBuscaUnidades/>} />
       </Routes>
     </BrowserRouter>
   )

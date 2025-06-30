@@ -5,13 +5,15 @@ dotenv.config(); // Carrega as variáveis de ambiente do .env da pasta backend
 import express from 'express';
 import cors from 'cors';
 
-// Importa as funções da API. Ajuste os caminhos se necessário.
-// Certifique-se de que cada arquivo .js em api/ exporta uma função default
-// que aceita (req, res).
 import buscaHandler from './api/busca.js';
 import especialidadesHandler from './api/especialidades.js';
 import geocodificarHandler from './api/geocodificar.js';
 import tiposHandler from './api/tipos.js';
+import loginHandler from './api/login.js';
+import { autenticarAdmin } from './api/authMiddleware.js';
+import adicionarHospitalHandler from './api/adicionarHospital.js';
+
+
 
 const app = express();
 const PORT = process.env.PORT || 3001; // Use a porta definida no .env ou 3001
@@ -21,10 +23,11 @@ app.use(cors()); // Habilita o CORS para permitir requisições do frontend
 app.use(express.json()); // Habilita o parsing de JSON no corpo da requisição
 app.use(express.urlencoded({ extended: true })); // Habilita o parsing de URL-encoded
 
-// Definir as rotas da API
-// As funções em api/*.js provavelmente assumem o req e res diretamente.
-// Se eles retornam uma função, pode ser (req, res) => handler(req, res).
-// Se eles são a própria função, é só handler.
+app.post('/api/login', loginHandler);
+
+app.post('/api/hospitais', autenticarAdmin, adicionarHospitalHandler);
+
+
 app.get('/api/busca', buscaHandler);
 app.get('/api/especialidades', especialidadesHandler);
 app.get('/api/geocodificar', geocodificarHandler);

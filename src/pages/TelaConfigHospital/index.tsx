@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { Cabecalho } from '../../components/Cabecalho';
+import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import './TelaConfigHospital.scss';
 
 type Hospital = {
@@ -41,7 +41,7 @@ export default function TelaConfigHospitais() {
 
   return (
     <div className="pagina-config-hospitais">
-      <Cabecalho mostrarLogo={true} mostrarMenu={false} mostrarBotaoVoltar={true}/>
+      <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={true} mostrarBotaoBusca={false}/>
 
       
       <main>
