@@ -1,4 +1,4 @@
-import { Cabecalho } from '../../components/Cabecalho';
+import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import './TelaLocHosp.scss';
 
 export default function TelaLocHosp() {

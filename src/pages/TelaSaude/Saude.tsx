@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 // Importa os componentes existentes do seu projeto
-import { Cabecalho } from '../../components/Cabecalho';
+import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import { BotaoOpcao } from '../../components/BotaoOpcao';
 
 // Importa os ícones e imagens existentes do seu projeto

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { Cabecalho } from '../../components/Cabecalho';
+import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import './BuscaUnidades.scss';
 
 const selectEstilo = {
