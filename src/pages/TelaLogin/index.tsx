@@ -15,7 +15,7 @@ export default function TelaLogin() {
     setError(''); // Limpa qualquer erro anterior
 
     try {
-      const response = await fetch('http://localhost:3001/api/login', { // Ajuste a URL se seu backend não estiver em localhost:3001
+      const response = await fetch('/api/login', { // Ajuste a URL se seu backend não estiver em localhost:3001
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

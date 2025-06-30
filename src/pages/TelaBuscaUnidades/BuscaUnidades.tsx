@@ -61,7 +61,7 @@ export function BuscaUnidades() {
   const [erro, setErro] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/tipos')
+    fetch('/api/tipos')
       .then(res => res.json())
       .then(data =>
         setTiposLista(
@@ -73,7 +73,7 @@ export function BuscaUnidades() {
       )
       .catch(() => setTiposLista([]));
 
-    fetch('http://localhost:3001/api/especialidades')
+    fetch('/api/especialidades')
       .then(res => res.json())
       .then(data =>
         setEspecialidadesLista(
@@ -94,7 +94,7 @@ export function BuscaUnidades() {
 
     try {
       // Geocodifica o endereço
-      const geoRes = await fetch(`http://localhost:3001/api/geocodificar?endereco=${encodeURIComponent(endereco)}`);
+      const geoRes = await fetch(`/api/geocodificar?endereco=${encodeURIComponent(endereco)}`);
       if (!geoRes.ok) throw new Error('Endereço não encontrado');
       const { lat, lng } = await geoRes.json();
 
@@ -108,7 +108,7 @@ export function BuscaUnidades() {
       if (especialidade) params.append('especialidade', especialidade.value);
 
       // Busca unidades próximas
-      const buscaRes = await fetch(`http://localhost:3001/api/busca?${params.toString()}`);
+      const buscaRes = await fetch(`/api/busca?${params.toString()}`);
       if (!buscaRes.ok) throw new Error('Erro ao buscar unidades');
       const data = await buscaRes.json();
 

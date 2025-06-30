@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://site--buscas-hospitais--2tymhltfsghw.code.run/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
