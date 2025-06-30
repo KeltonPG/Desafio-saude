@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TelaSaude from './pages/TelaSaude/Saude'
 
 import TelaLocHosp from './pages/TelaLocHosp'
-import TelaSobreNos from './pages/TelaSobreNos/SobreNos';
+import TelaSobreNos from './pages/TelaSobreNos';
 import TelaBuscaUnidades from './pages/TelaBuscaUnidades/BuscaUnidades';
 import TelaLogin from './pages/TelaLogin'
 import TelaConfigHospitais from './pages/TelaConfigHospital'
