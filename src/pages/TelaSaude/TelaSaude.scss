@@ -1,0 +1,64 @@
+.pagina-central {
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px;
+
+  .titulo-principal {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .subtitulo-negrito {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    > * {
+      width: 250px;
+    }
+  }
+
+}
+
+.fundo-foto {
+  background-color: #D9D9D9;
+  display: block;
+  padding: 8px 6rem;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+
+
+.rodape {
+  width: 100%;               
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #0057A0;
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.75rem;  
+  font-weight: 700;
+  box-sizing: border-box;
+  z-index: 1000; 
+
+  p {
+    margin: 0;
+  }
+}
+
