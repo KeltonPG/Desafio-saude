@@ -10,7 +10,7 @@ import exame from '../../assets/emergencia.svg';
 import emergencia from '../../assets/emergencia.svg';
 import vacinaAplicada from '../../assets/vacina_aplicada.png';
 import check from '../../assets/check.svg';
-import Jogo from '../../assets/jogo.png';
+import jogo from '../../assets/jogo.png';
 
 
 export default function HomePage() {
@@ -25,7 +25,7 @@ export default function HomePage() {
     {
       titulo: 'Experimente o nosso jogo e aprenda brincando',
       texto: 'Este jogo foi desenvolvido para conscientizar, de forma divertida, sobre a importância de marcar e não faltar às consultas médicas. Comparecer às consultas ajuda no diagnóstico precoce, no acompanhamento da saúde e na melhoria do atendimento para todos',
-      imagem: Jogo,
+      imagem: jogo,
       link: 'https://joao104.github.io/jogo-rota-de-vida/',
     },
   ];
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="logo">© 2025 Grupo de Desenvolvimento • Plataforma de Apoio à Saúde</div>
         <div className="links">
           <a href="/sobre">Sobre</a>
-          <a href="#">Contato</a>
+          <a href="/contatos">Contato</a>
           <a href="#">Privacidade</a>
         </div>
       </footer>

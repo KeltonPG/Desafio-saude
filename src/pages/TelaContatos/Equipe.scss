@@ -1,0 +1,226 @@
+// src/pages/Equipe/Equipe.scss
+
+.equipe-wrapper {
+    font-family: 'Poppins', sans-serif;
+    background: #eaf6ff;
+    color: #143b7d;
+    min-height: 100vh;
+  
+    h1 {
+      font-size: 2rem;
+      margin: 2rem 1rem 0.5rem;
+      font-weight: 700;
+    }
+  
+    .intro {
+      margin: 0 1rem 2rem;
+      font-size: 1rem;
+      color: #3a4a5e;
+      line-height: 1.5;
+    }
+  }
+  
+  .equipe-main {
+    padding: 0 1rem 3rem;
+  
+    h1 {
+      margin-top: 5rem;
+    }
+  
+    .intro {
+      margin-top: 1.2rem;
+    }
+  }
+  
+  .trilha-bloco {
+    margin-bottom: 2.5rem;
+  
+    .trilha-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 1rem;
+  
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+  
+      .controles {
+        display: flex;
+        gap: 0.5rem;
+  
+        button {
+          background: #0a4db3;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+          font-size: 1.1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+  
+          &:hover {
+            background: #143b7d;
+          }
+        }
+      }
+    }
+  
+    .cards-container {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scroll-behavior: smooth;
+  
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+      }
+    }
+  
+    .card-equipe {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem;
+      min-width: 180px;
+      max-width: 200px;
+      box-shadow: 0 2px 8px rgba(20, 59, 125, 0.1);
+      text-align: center;
+      flex-shrink: 0;
+  
+      img {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 0.6rem;
+        background: #dbeafe;
+      }
+  
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0.2rem 0;
+      }
+  
+      .funcao {
+        font-size: 0.95rem;
+        color: #3a4a5e;
+        margin-bottom: 0.8rem;
+      }
+  
+      .icones {
+        display: flex;
+        justify-content: center;
+        gap: 0.7rem;
+  
+        a {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          background-color: #0a4db3;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 60%;
+          transition: background 0.2s;
+  
+          &.linkedin {
+            background-image: url('../../assets/contatos/linkedin.svg');
+          }
+  
+          &.github {
+            background-image: url('../../assets/contatos/github.svg');
+          }
+  
+          &.email {
+            background-image: url('../../assets/contatos/gmail.svg');
+          }
+  
+          &.phone {
+            background-image: url('../../assets/contatos/phone.svg');
+          }
+  
+          &:hover {
+            background-color: #143b7d;
+          }
+        }
+      }
+    }
+  }
+  
+  .contato-cta {
+    text-align: center;
+    margin-top: 3rem;
+  
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #3a4a5e;
+  
+      a {
+        color: #0a4db3;
+        text-decoration: none;
+        font-weight: 500;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  .contato-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto 0 auto;
+    max-width: 400px;
+  
+    input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: none;
+      border-radius: 0.7rem;
+      background: #fff;
+      font-size: 1rem;
+      color: #143b7d;
+      box-shadow: 0 2px 8px rgba(20, 59, 125, 0.07);
+      outline: none;
+    }
+  
+    button {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #0a4db3;
+      color: #fff;
+      border: none;
+      border-radius: 0.7rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(20, 59, 125, 0.07);
+  
+      &:hover {
+        background: #143b7d;
+      }
+    }
+  }
+  

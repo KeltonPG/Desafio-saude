@@ -6,7 +6,7 @@ export default function TelaSobreNos() {
 
     return (
         <div className='pagina-sobrenos'>
-            <Cabecalho mostrarLogo={true} mostrarMenu={true} mostrarBotaoVoltar={true} mostrarBotaoBusca={false}/>
+            <Cabecalho mostrarLogo mostrarBotaoVoltar= {true} mostrarBotaoBusca={false} mostrarMenu={false}/>
 
             <header className='pagina-sobre'>
                 <h1 className='titulo-principal'>Sobre Nós</h1>
@@ -31,6 +31,8 @@ export default function TelaSobreNos() {
                         tecnologia, inovação e compromisso social para impactar positivamente 
                         a vida da população maranhense. 
                     </p>
+                    <img className='img__quem__somos' src="../src/assets/quem__somos.png"  
+                        alt='grupo de pessoas' />
                 </section>
             </main>
         </div>
