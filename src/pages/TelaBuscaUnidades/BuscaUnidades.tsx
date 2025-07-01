@@ -133,7 +133,7 @@ export function BuscaUnidades() {
       <main className="busca-main">
         <img src="/src/assets/mapa-pin.png" alt="Pino de mapa" className="pin-img" />
 
-        <h1 className="titulo-principal" style={{ background: '#0057a0', color: '#fff', padding: '0.5rem', borderRadius: 4 }}>
+        <h1 className="titulo-principal" style={{ background: '#0057a0', color: '#fff', padding: '0.5rem', borderRadius: 15 }}>
           Buscar Especialidade ou Hospital
         </h1>
 

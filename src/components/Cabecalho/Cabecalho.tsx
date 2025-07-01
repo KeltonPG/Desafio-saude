@@ -51,7 +51,7 @@ export function Cabecalho({
       <div className="lado-direito">
         {mostrarMenu && !modoVoltar && (
           <nav className="menu">
-            <a href="/">Dashboard</a>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMTJlMGFiNWMtYWIxMC00N2QyLWE4MGMtZGJkODZlYzhmNTM4IiwidCI6ImIzYzAwMzk5LTEwNjEtNGEyOS04NWE2LWQxNWEyMzljM2FkNSJ9">Dashboard</a>
             <a href="/login">Login</a>
           </nav>
         )}
