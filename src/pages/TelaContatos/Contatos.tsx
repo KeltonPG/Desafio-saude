@@ -41,17 +41,21 @@ const membros: Membro[] = [
     { tipo: 'email', url: 'mailto:Isabelcsousa345@gmail.com' },
     { tipo: 'phone', url: 'tel:+5598992291048' }
   ] },
-  { id: '8', nome: 'Kelton Kauã', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [] },
-  { id: '9', nome: 'Yan', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [] },
-  { id: '10', nome: 'João', trilha: 'Jogos', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [] },
-  { id: '11', nome: 'Mateus Dutra Vale', trilha: 'Back-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
+  { id: '8', nome: 'Kelton Kauã', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [{ tipo: 'github', url: 'https://github.com/KeltonPG' }] },
+  { id: '9', nome: 'Verônica Generosa Silva dos Santos Magalhães', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [{ tipo: 'email', url: 'mailto:veronica.generosa13@gmail.com' }] },
+  { id: '10', nome: 'Yan', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [] },
+  { id: '11', nome: 'João Marcos Souza Costa', trilha: 'Jogos', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
+    { tipo: 'email', url: 'mailto:joaomarcoscoasta@gmail.com' },
+    { tipo: 'linkedin', url: 'https://www.linkedin.com/in/joao-marcos-souza-2834b3325/' }
+  ] },
+  { id: '12', nome: 'Mateus Dutra Vale', trilha: 'Back-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
     { tipo: 'email', url: 'mailto:mateus.dutra.vale.dv@gmail.com' }
   ] },
 ];
 
 // Função auxiliar para escolher avatar fake
 function getFakeAvatar(nome: string) {
-  const nomesFemininos = ['Carolina', 'Gabriela', 'Geovanna', 'Alanna', 'Hirislayne', 'Isabel', 'Hévila'];
+  const nomesFemininos = ['Carolina', 'Gabriela', 'Geovanna', 'Alanna', 'Hirislayne', 'Isabel', 'Hévila', 'Verônica'];
   return nomesFemininos.some(n => nome.toLowerCase().includes(n.toLowerCase()))
     ? '/src/assets/contatos/avatar-female.svg'
     : '/src/assets/contatos/avatar-male.svg';
@@ -114,22 +118,6 @@ export default function Equipe() {
             </div>
           </section>
         ))}
-
-        {/* CTA rápido */}
-        <section className="contato-cta">
-          <h2>Entre em contato</h2>
-          <p>
-            Envie um e‑mail para <a href="mailto:contato@cliniperto.com">contato@cliniperto.com</a> ou fale com a gente
-            pelo <a href="https://www.linkedin.com">LinkedIn</a>.
-          </p>
-        </section>
-
-        {/* Formulário de contato */}
-        <form className="contato-form">
-          <input type="text" name="nome" placeholder="Nome" required />
-          <input type="text" name="contato" placeholder="Contato" required />
-          <button type="submit">Enviar</button>
-        </form>
       </main>
     </div>
   );

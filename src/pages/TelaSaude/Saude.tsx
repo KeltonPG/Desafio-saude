@@ -6,7 +6,7 @@ import './TelaSaude.scss';
 import mapaPin2 from '../../assets/mapa-pin2.png';
 import vacina from '../../assets/vacina.svg';
 import doutora from '../../assets/doutora.svg';
-import exame from '../../assets/emergencia.svg';
+import exame from '../../assets/recepcionista.svg';
 import emergencia from '../../assets/emergencia.svg';
 import vacinaAplicada from '../../assets/vacina_aplicada.png';
 import check from '../../assets/check.svg';
@@ -86,12 +86,12 @@ export default function HomePage() {
             <Link to="/busca" className="btn-unidades">Ver unidades</Link>
           </div>
           <div className="card">
-            <img src={doutora} alt="Consultas" />
+            <img src={exame} alt="Consultas" />
             <p>Consultas</p>
             <Link to="/busca" className="btn-unidades">Ver unidades</Link>
           </div>
           <div className="card">
-            <img src={exame} alt="Exames" />
+            <img src={doutora} alt="Exames" />
             <p>Exames</p>
             <Link to="/busca" className="btn-unidades">Ver unidades</Link>
           </div>
