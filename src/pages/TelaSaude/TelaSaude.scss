@@ -1,0 +1,377 @@
+$azul-escuro: #143b7d;
+$azul-principal: #0a4db3;
+$azul-claro: #eaf6ff;
+$cinza-escuro: #3a4a5e;
+
+.homepage-container {
+  color: #1e1e1e;
+  background: $azul-claro;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  margin-top: 2rem;
+}
+
+/* 1. HERO ---------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  background: $azul-claro;
+  padding: 3rem 2rem 2rem;
+  border-radius: 0 0 2.5rem 2.5rem;
+  min-height: 180px;
+
+  .textos {
+    flex: 1;
+    min-width: 120px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: $azul-escuro;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $cinza-escuro;
+      margin-bottom: 1.1rem;
+      text-align: left;
+    }
+
+    button {
+      padding: 0.9rem 2.2rem;
+      border-radius: 2rem;
+      border: none;
+      background: $azul-principal;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(10, 77, 179, .08);
+      transition: background .2s;
+      align-self: flex-start;
+      margin-top: 0.2rem;
+
+      &:hover { background: $azul-escuro; }
+    }
+  }
+
+  .mapa-img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 1.5rem;
+    background: #d0eaff;
+    padding: .5rem;
+    box-shadow: 0 4px 24px rgba(20, 59, 125, .08);
+    display: block;
+  }
+}
+
+/* Ajustes celular (≤480 px) */
+@media (max-width: 700px) {
+  .hero {
+    gap: 0.5rem;
+    .mapa-img {
+      max-width: 150px;
+      margin-left: 0.5rem;
+      display: block;
+    }
+    .textos {
+      max-width: 60vw;
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. COMO FUNCIONA ------------------------------------------- */
+.como-funciona {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  margin: 2rem auto 0 auto;
+  padding: 1.2rem 0.5rem;
+  max-width: 980px;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px rgba(20, 59, 125, .06);
+
+  .passo-card {
+    background: $azul-claro;
+    border-radius: 1.2rem;
+    padding: 0.6rem 0.5rem 0.7rem 0.5rem;
+    min-width: 100px;
+    max-width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(20, 59, 125, .06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: $azul-principal;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    span svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+    p {
+      margin-top: 0.2rem;
+      font-size: 1.01rem;
+      color: $cinza-escuro;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .como-funciona {
+    .passo-card {
+      min-width: unset;
+      max-width: unset;
+      width: 33.33%;
+      flex: 1 1 0;
+      padding: 0.3rem 0.1rem 0.3rem 0.1rem;
+      font-size: 0.85rem;
+      span {
+        width: 22px;
+        height: 22px;
+        margin-top: 0.2rem;
+      }
+      span svg {
+        width: 12px;
+        height: 12px;
+      }
+      p {
+        font-size: 1rem;
+        padding-top: 0.2rem;
+      }
+    }
+  }
+}
+
+/* 3. SERVIÇOS POPULARES -------------------------------------- */
+.servicos-populares {
+  padding: 2rem 1rem .5rem;
+
+  h2 {
+    margin-left: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $azul-escuro;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .card {
+    background: #fff;
+    width: 180px;
+    padding: 1.2rem 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(20, 59, 125, .07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img { width: 54px; height: 54px; margin-bottom: .7rem; }
+    p   { font-weight: 600; font-size: 1.05rem; color: $azul-escuro; margin-bottom: .7rem; }
+
+    button {
+      background: $azul-principal;
+      color: #fff;
+      border: none;
+      padding: .6rem 1.2rem;
+      border-radius: 1.2rem;
+      font-size: .94rem;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover { background: $azul-escuro; }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-populares .cards {
+    justify-content: center;
+    .card { width: 46%; max-width: 200px; }
+  }
+}
+
+/* 4. CARROSSEL DE NOTÍCIAS ----------------------------------- */
+.noticias {
+  padding: 2rem 1rem .5rem;
+
+  h2 {
+    margin-left: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $azul-escuro;
+  }
+
+  .carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 3rem;
+
+    .seta-container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.5rem; height: 2.5rem;
+      display: flex; align-items: center; justify-content: center;
+
+      &.esquerda { left: 0; }
+      &.direita  { right: 0; }
+
+      .seta {
+        background: transparent;
+        border: none;
+        color: $azul-principal;
+        font-size: 2rem;
+        opacity: .2;
+        cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover { opacity: .8; }
+      }
+    }
+  }
+
+  .noticia-carrossel {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-width: 960px;
+    box-shadow: 0 2px 16px rgba(20, 59, 125, .06);
+
+    img {
+      max-width: 25rem;
+      border-radius: 1.2rem;
+      background: $azul-claro;
+      padding: .2rem;
+      object-fit: cover;
+    }
+
+    .texto {
+      flex: 1;
+      h3 { font-size: 1.1rem; font-weight: 700; color: $azul-escuro; margin-bottom: .4rem; }
+      p  { font-size: .98rem; color: $cinza-escuro; margin-bottom: .6rem; }
+      button {
+        background: $azul-principal;
+        border: none;
+        color: #fff;
+        padding: .55rem 1.2rem;
+        border-radius: 1.2rem;
+        font-size: .9rem;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover { background: $azul-escuro; }
+      }
+    }
+  }
+}
+
+/* celular */
+@media (max-width: 480px) {
+  .noticias .carrossel {
+    padding: 0 1.2rem;
+
+    .seta-container {
+      width: 2rem; height: 2rem;
+      .seta { font-size: 1.6rem; }
+    }
+  }
+
+  .noticia-carrossel {
+    flex-direction: column;
+    gap: 1rem;
+
+    img { width: 100%; max-width: 90vw; }
+  }
+}
+
+/* 5. RODAPÉ --------------------------------------------------- */
+.rodape {
+  background: #fff;
+  margin-top: 2rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 -2px 12px rgba(20, 59, 125, .06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: $azul-escuro;
+  font-size: 1rem;
+
+  .links a {
+    margin-left: 1.5rem;
+    color: $azul-principal;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover { text-decoration: underline; }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    text-align: center;
+    gap: .8rem;
+    padding: 1.2rem;
+  }
+}
+
+.btn-unidades {
+  background: $azul-principal;
+  color: #fff;
+  border: none;
+  padding: .6rem 1.2rem;
+  border-radius: 1.2rem;
+  font-size: .94rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background .2s;
+  margin-top: 0.3rem;
+  &:hover { background: $azul-escuro; }
+}
