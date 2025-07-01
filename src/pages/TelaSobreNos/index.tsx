@@ -1,4 +1,5 @@
 import { Cabecalho } from '../../components/Cabecalho'
+import grupo from '../../assets/quem__somos.png'
 import './TelaSobreNos.scss'
 
 
@@ -6,7 +7,7 @@ export default function TelaSobreNos() {
 
     return (
         <div className='pagina-sobrenos'>
-            <Cabecalho mostrarLogo= {true} mostrarMenu={true} mostrarBotaoVoltar={false}/>
+            <Cabecalho mostrarLogo= {true} mostrarBotaoVoltar={true}/>
 
             <header className='pagina-sobre'>
                 <h1 className='titulo-principal'>Sobre Nós</h1>
@@ -31,7 +32,7 @@ export default function TelaSobreNos() {
                         tecnologia, inovação e compromisso social para impactar positivamente 
                         a vida da população maranhense. 
                     </p>
-                    <img className='img__quem__somos' src="../src/assets/quem__somos.png"  
+                    <img className='img__quem__somos' src={grupo}  
                         alt='grupo de pessoas' />
                 </section>
             </main>

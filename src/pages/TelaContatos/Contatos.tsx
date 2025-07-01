@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
 import './Equipe.scss';
+import avatar_female from '../../assets/contatos/avatar-female.svg';
+import avatar_male from '../../assets/contatos/avatar-male.svg';
 
 // ---------------------- Tipos auxiliares ----------------------
 type Trilha = 'Front-End' | 'Back-End' | 'UX' | 'Jogos' | 'Dados';
@@ -78,8 +80,8 @@ const membros: Membro[] = [
 function getFakeAvatar(nome: string) {
   const nomesFemininos = ['Carolina', 'Gabriela', 'Geovanna', 'Alanna', 'Hirislayne', 'Isabel', 'Hévila', 'Verônica', 'Stephanie', 'Rayanne'];
   return nomesFemininos.some(n => nome.toLowerCase().includes(n.toLowerCase()))
-    ? '/src/assets/contatos/avatar-female.svg'
-    : '/src/assets/contatos/avatar-male.svg';
+    ? avatar_female
+    : avatar_male;
 }
 
 export default function Equipe() {
