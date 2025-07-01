@@ -65,7 +65,7 @@ export default function TelaLogin() {
             </button>
           </div>
           <div className="cadastre-se">
-            <a href="/cadastro">Cadastre-se</a>
+            <a href="/cadastre-se">Cadastre-se</a>
           </div>
         </div>
       </main>
