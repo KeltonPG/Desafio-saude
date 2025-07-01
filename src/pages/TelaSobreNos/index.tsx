@@ -1,4 +1,4 @@
-import { Cabecalho } from '../../components/Cabecalho/Cabecalho'
+import { Cabecalho } from '../../components/Cabecalho'
 import './TelaSobreNos.scss'
 
 
@@ -6,7 +6,7 @@ export default function TelaSobreNos() {
 
     return (
         <div className='pagina-sobrenos'>
-            <Cabecalho mostrarLogo mostrarBotaoVoltar= {true} mostrarBotaoBusca={false} mostrarMenu={false}/>
+            <Cabecalho mostrarLogo= {true} mostrarMenu={true} mostrarBotaoVoltar={false}/>
 
             <header className='pagina-sobre'>
                 <h1 className='titulo-principal'>Sobre Nós</h1>
