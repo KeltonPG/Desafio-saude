@@ -45,6 +45,7 @@ export function Cabecalho({
         <nav className="menu">
           <a href="/sobre">Sobre Nós</a>
           <a href="/login">Login (ADM)</a>
+          <a href="/cadastre">Cadastre-se</a>
         </nav>
       )}
 
