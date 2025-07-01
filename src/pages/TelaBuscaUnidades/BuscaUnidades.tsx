@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Select from 'react-select';
 import { Cabecalho } from '../../components/Cabecalho/Cabecalho';
+import mapa_pin from '../../assets/mapa-pin.png';
 import './BuscaUnidades.scss';
 
 const selectEstilo = {
@@ -131,7 +132,7 @@ export function BuscaUnidades() {
       />
 
       <main className="busca-main">
-        <img src="/src/assets/mapa-pin.png" alt="Pino de mapa" className="pin-img" />
+        <img src={mapa_pin} alt="Pino de mapa" className="pin-img" />
 
         <h1 className="titulo-principal" style={{ background: '#0057a0', color: '#fff', padding: '0.5rem', borderRadius: 15 }}>
           Buscar Especialidade ou Hospital
