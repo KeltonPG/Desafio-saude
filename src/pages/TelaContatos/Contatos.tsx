@@ -17,7 +17,7 @@ interface Membro {
   }[];
 }
 
-// ---------------------- Dados dummy ---------------------------
+// ---------------------- Dados ---------------------------
 const membros: Membro[] = [
   { id: '1', nome: 'Alanna Sophia', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [{ tipo: 'email', url: 'mailto:alannasophia2730@gmail.com' }] },
   { id: '2', nome: 'Geovanna Costa', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [{ tipo: 'email', url: 'mailto:geogabby18@gmail.com' }] },
@@ -41,9 +41,14 @@ const membros: Membro[] = [
     { tipo: 'email', url: 'mailto:Isabelcsousa345@gmail.com' },
     { tipo: 'phone', url: 'tel:+5598992291048' }
   ] },
-  { id: '8', nome: 'Kelton Kauã', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [{ tipo: 'github', url: 'https://github.com/KeltonPG' }] },
+  { id: '8', nome: 'Kelton Kauã', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
+    { tipo: 'github', url: 'https://github.com/KeltonPG' },
+    { tipo: 'linkedin', url: 'https://www.linkedin.com/in/kelton-santos-86b196367/' }
+  ] },
   { id: '9', nome: 'Verônica Generosa Silva dos Santos Magalhães', trilha: 'Front-End', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [{ tipo: 'email', url: 'mailto:veronica.generosa13@gmail.com' }] },
-  { id: '10', nome: 'Yan', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [] },
+  { id: '10', nome: 'Yan', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
+    { tipo: 'email', url: 'mailto:yanlorenzo96@gmail.com' }
+  ] },
   { id: '11', nome: 'João Marcos Souza Costa', trilha: 'Jogos', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
     { tipo: 'email', url: 'mailto:joaomarcoscoasta@gmail.com' },
     { tipo: 'linkedin', url: 'https://www.linkedin.com/in/joao-marcos-souza-2834b3325/' }
@@ -51,11 +56,27 @@ const membros: Membro[] = [
   { id: '12', nome: 'Mateus Dutra Vale', trilha: 'Back-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
     { tipo: 'email', url: 'mailto:mateus.dutra.vale.dv@gmail.com' }
   ] },
+  { id: '13', nome: 'Gabriela Queiroz', trilha: 'Back-End', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [
+    { tipo: 'email', url: 'mailto:gabiqrz25@gmail.com' },
+    { tipo: 'github', url: 'https://github.com/gabrielaqueirxz' },
+    { tipo: 'linkedin', url: 'https://br.linkedin.com/in/gabriela-queiroz-b7a123216' }
+  ] },
+  { id: '14', nome: 'Stephanie Soares De Sousa', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [
+    { tipo: 'linkedin', url: 'https://www.linkedin.com/in/stephanie-sousa-77908921b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+    { tipo: 'email', url: 'mailto:stephaniesousaks@gmail.com' },
+    { tipo: 'phone', url: 'tel:+5598983288754' },
+    { tipo: 'github', url: 'https://www.canva.com/design/DAGrL-YwOE4/AfIvhm6N2lwZhz4ZpMVJNw/edit?utm_content=DAGrL-YwOE4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' }
+  ] },
+  { id: '15', nome: 'Rayanne da Cunha Moraes', trilha: 'UX', funcao: '', avatar: '/assets/contatos/avatar-female.svg', links: [
+    { tipo: 'phone', url: 'tel:+5598984541651' }
+  ] },
+  { id: '16', nome: 'Gilvan Nascimento', trilha: 'Back-End', funcao: '', avatar: '/assets/contatos/avatar-male.svg', links: [
+    { tipo: 'email', url: 'mailto:Gilvann974@hotmail.com' }
+  ] },
 ];
 
-// Função auxiliar para escolher avatar fake
 function getFakeAvatar(nome: string) {
-  const nomesFemininos = ['Carolina', 'Gabriela', 'Geovanna', 'Alanna', 'Hirislayne', 'Isabel', 'Hévila', 'Verônica'];
+  const nomesFemininos = ['Carolina', 'Gabriela', 'Geovanna', 'Alanna', 'Hirislayne', 'Isabel', 'Hévila', 'Verônica', 'Stephanie', 'Rayanne'];
   return nomesFemininos.some(n => nome.toLowerCase().includes(n.toLowerCase()))
     ? '/src/assets/contatos/avatar-female.svg'
     : '/src/assets/contatos/avatar-male.svg';
