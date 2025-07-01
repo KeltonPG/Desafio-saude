@@ -10,7 +10,7 @@ import exame from '../../assets/recepcionista.svg';
 import emergencia from '../../assets/emergencia.svg';
 import vacinaAplicada from '../../assets/vacina_aplicada.png';
 import check from '../../assets/check.svg';
-import jogo from '../../assets/jogo.png';
+import game from '../../assets/jogo.png';
 
 
 export default function HomePage() {
@@ -25,7 +25,7 @@ export default function HomePage() {
     {
       titulo: 'Experimente o nosso jogo e aprenda brincando',
       texto: 'Este jogo foi desenvolvido para conscientizar, de forma divertida, sobre a importância de marcar e não faltar às consultas médicas. Comparecer às consultas ajuda no diagnóstico precoce, no acompanhamento da saúde e na melhoria do atendimento para todos',
-      imagem: jogo,
+      imagem: game,
       link: 'https://joao104.github.io/jogo-rota-de-vida/',
     },
   ];
